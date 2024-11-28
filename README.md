@@ -84,3 +84,30 @@ git reset HEAD <the file to recover>
 
 git checkout -- <the file to recover>
 ```
+
+
+```sh
+git reset --hard HEAD^
+
+git checkout -- <the file to recover>
+```
+
+```sh
+git revert --no-edit HEAD
+```
+// This will create a new commit undoing what was done recently
+
+
+### Go back a few commitiment
+```sh
+git log --oneline
+git checkout <the rash of the commit you want to go back to>
+
+git commit -m 'Reverting back to ...'
+```
+
+
+### Push origin to remote
+```sh
+git push -u origin main
+```
